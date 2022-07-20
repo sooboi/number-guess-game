@@ -8,12 +8,25 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>😈 숫자 맞추기 게임 😈</h1>
-    <div id="result-area">결과는 ?</div>
-    <div id="chance-area">남은 기회 : 5</div>
-    <input type="number" id="user-num" />
-    <button id="play-btn">도전</button>
-    <button id="reset-btn">리셋</button>
+    <div class="Wrapper">
+      <div class="Box">
+        <header>
+          <h1>😈 숫자 맞추기 게임 😈</h1>
+        </header>
+        <main>
+          <div><img src="./images/normal.gif" alt="" /></div>
+          <br />
+          <div id="result-area">결과는 ?</div>
+          <br />
+          <input type="number" id="user-num" /><br />
+          <div class="btn-area">
+            <button id="play-btn">도전</button>
+            <button id="reset-btn">리셋</button>
+            <div id="chance-area">남은 기회 : 5</div>
+          </div>
+        </main>
+      </div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>

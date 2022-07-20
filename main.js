@@ -34,7 +34,6 @@ function play() {
 
   chances--;
   chanceArea.textContent = `남은 기회 :${chances}`;
-  console.log(chances);
 
   if (userValue < computerNum) {
     resultArea.textContent = "Up";
@@ -48,8 +47,9 @@ function play() {
   userHistory.push(userValue);
   console.log(userHistory);
 
-  if (chances < 1) {
+  if (chances < 1 && userValue !== computerNum) {
     gameOver = true;
+    resultArea.textContent = "망했군여...😱";
   }
 
   if (gameOver == true) {
@@ -58,12 +58,14 @@ function play() {
 }
 
 function reset() {
-  userNum.value = "";
+  gameOver = false;
   pickRandomNum();
-  resultArea.textContent = "결과는 ?";
   userHistory = [];
   chances = 5;
   chanceArea.textContent = "남은 기회 : 5";
+  resultArea.textContent = "결과는 ?";
+  userNum.value = "";
+  playBtn.disabled = false;
 }
 
 pickRandomNum();
